@@ -1,28 +1,35 @@
-int led = 13;
-int green=12;
-int led2=11;
+int red = 12;
+int yellow=8;
+int green=4;
 void setup() {
   // put your setup code here, to run once:
-pinMode(led,OUTPUT);
+pinMode(red,OUTPUT);
+pinMode(yellow,OUTPUT);
 pinMode(green,OUTPUT);
-pinMode(led2,OUTPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-digitalWrite(led,HIGH);
-delay(10);
-digitalWrite(led,LOW);
-delay(10);
-digitalWrite(led2,HIGH);
-delay(10);
-digitalWrite(led2,LOW);
-delay(10);
+digitalWrite(red,HIGH);
+delay(3000);
+digitalWrite(red,LOW);
+delay(3000);
+
+digitalWrite(yellow,HIGH);
+delay(2000);
+digitalWrite(yellow,LOW);
+delay(2000);
 
 digitalWrite(green,HIGH);
-delay(10);
-
+delay(2000);
 digitalWrite(green,LOW);
-delay(10);
+delay(2000);
+
+for(int i=0; i<3; i++){
+  digitalWrite(green,HIGH);
+  delay(500);
+  digitalWrite(green,LOW);
+  delay(500);
+}
 
 }
